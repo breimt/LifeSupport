@@ -15,6 +15,8 @@ public class MainActivity extends AppCompatActivity {
     private Button groceryButton;
     private Button toDoButton;
 
+    private Button spellBookButton;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -22,6 +24,7 @@ public class MainActivity extends AppCompatActivity {
 
         groceryButton = (Button)findViewById(R.id.groceryListButton);
         toDoButton = (Button)findViewById(R.id.toDoListButton);
+        spellBookButton = (Button)findViewById(R.id.spellBookButton);
 
 
         //OnClick for GroceryList button
@@ -41,7 +44,19 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        //OnClick for SpellBook button
+        spellBookButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) { openSpellBookActivity(); }
+        });
 
+
+
+    }
+
+    private void openSpellBookActivity() {
+        Intent intent = new Intent(this, SpellBookActivity.class);
+        startActivity(intent);
     }
 
     public void openToDoListActivity(){

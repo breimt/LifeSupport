@@ -46,4 +46,13 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toEndOf="@+id/groceryListButton" />
 
+    <Button
+        android:id="@+id/spellBookButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="64dp"
+        android:text="Spell Book"
+        app:layout_constraintBottom_toTopOf="@+id/toDoListButton"
+        app:layout_constraintEnd_toEndOf="@+id/toDoListButton" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
